@@ -1,29 +1,25 @@
 package com.company;
+import static com.company.SortingUtilities.swap;
 
 public class selectionSort {
 
     public static void selectionSort(int[]arr) {
-        int len = arr.length;
-        int min = 0;
+     for(int index = 0; index < arr.length; index++)
+     {
+        minimum(arr, index);
+     }
+    }
 
-        for (int b = 0; b < arr.length; b++)
-        {
-            for (int a = 0; a<arr.length-1; a++)
-                {
-                    int check1 = arr[a];
-                    int check2 = arr [a+1];
 
-                    if (check1>check2)
-                    {
-                        min = check2;
-                    }
-                    else
-                {
-                    min = check1;
-                }
+    public static int minimum(int arr[], int ind) {
+        int minInd = ind;
+        for (int i = ind; i < arr.length; i++) {
+            if (arr[i] < arr[minInd]) {
+                swap(arr,arr[i], arr[minInd]);
+                minInd = i;
             }
-            arr[b] = min;
         }
+        return minInd;
     }
 
 }
