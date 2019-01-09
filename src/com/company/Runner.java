@@ -22,9 +22,7 @@ public class Runner {
 
 	    System.out.println("Time taken: "+time+" nanoseconds");
 
-
-	    // selection Sort testing
-
+	    /****************************************************/
 
         int [] testArr2 = {7,5,3,5,2,4,2,1,3,4,4};
 
@@ -44,6 +42,24 @@ public class Runner {
         System.out.println();
 
 
+        /*****************************************************/
+
+        int [] testArr3 = {9,4,6,3,2,7,5,4,2,7,31,9};
+
+        System.out.print("Before: ");
+        for  (int num:testArr3)
+        {System.out.print(num+" ");}
+        System.out.println();
+
+
+        InPlaceSorts.insertionSort(testArr3);
+
+
+        System.out.print("After: ");
+        for (int num:testArr3) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
 
         }
 

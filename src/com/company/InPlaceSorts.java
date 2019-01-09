@@ -37,6 +37,17 @@ public class InPlaceSorts {
         return minInd;
     }
 
+    public static void insertionSort(int[]arr){
+        for (int index = 0; index < arr.length ; index ++)
+        {
+            int min = arr[index];
+            if (arr[index +1]>min)
+            {
+
+            }
+        }
+
+    }
 
 }
 
