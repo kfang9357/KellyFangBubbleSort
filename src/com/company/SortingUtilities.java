@@ -22,4 +22,3 @@ public class SortingUtilities
             return false;
         }
     }
-}

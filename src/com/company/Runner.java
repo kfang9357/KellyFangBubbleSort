@@ -1,6 +1,6 @@
 package com.company;
 
-public class BubbleSortRunner {
+public class Runner {
 
     public static void main(String[] args) {
 	    int [] testArr = {8,6,7,5,3,0,9,10,1,2,3};
@@ -11,7 +11,7 @@ public class BubbleSortRunner {
 	    System.out.println();
 
 	    long time = System.nanoTime();
-	    BubbleSort.bubbleSort(testArr);
+	    InPlaceSorts.bubbleSort(testArr);
 	    time = System.nanoTime() - time;
 
 	    System.out.print("After: ");
@@ -29,16 +29,16 @@ public class BubbleSortRunner {
         int [] testArr2 = {8,6,7,5,3,0,9,10,1,2,3};
 
         System.out.print("Before: ");
-        for  (int num:testArr)
+        for  (int num:testArr2)
         {System.out.print(num+" ");}
         System.out.println();
 
 
-        selectionSort.selectionSort(testArr2);
+        InPlaceSorts.selectionSort(testArr2);
 
 
         System.out.print("After: ");
-        for (int num:testArr) {
+        for (int num:testArr2) {
             System.out.print(num + " ");
         }
         System.out.println();
@@ -46,6 +46,5 @@ public class BubbleSortRunner {
 
 
         }
-
 
     }
