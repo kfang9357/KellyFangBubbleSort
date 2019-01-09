@@ -26,7 +26,7 @@ public class Runner {
 	    // selection Sort testing
 
 
-        int [] testArr2 = {8,6,7,5,3,0,9,10,1,2,3};
+        int [] testArr2 = {7,5,3,5,2,4,2,1,3,4,4};
 
         System.out.print("Before: ");
         for  (int num:testArr2)

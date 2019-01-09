@@ -18,26 +18,24 @@ public class InPlaceSorts {
             }
         }
     }
-        public static void selectionSort(int[]arr) {
+
+    public static void selectionSort(int[]arr) {
         for(int index = 0; index < arr.length; index++)
-            {
-                int minInd = arr[index];
-                for (int i = index + 1; i <arr.length; i++)
-                {
-                    if (arr[i] < minInd)
-                    {
-                        swap(arr,arr[i],arr[index]);
-                    }
-                }
-            }
+           minimumIndex(arr, index);
         }
 
-/**
-    public static void minimum(int arr[], int ind)
+    public static int minimumIndex(int arr[], int ind)
     {
-
+        int minInd = ind;
+        for (int i = ind + 1; i <arr.length; i++)
+        {
+            if (arr[i] < arr[minInd])
+            {
+                swap(arr,i,minInd);
+            }
+        }
+        return minInd;
     }
-**/
 
 
 }
