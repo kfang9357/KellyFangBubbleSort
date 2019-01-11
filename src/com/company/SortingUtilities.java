@@ -37,12 +37,19 @@ public class SortingUtilities
             arr[j] = temp;
         }
 
-        public static boolean isSorted(int[] arr)
+        public static void swap2 (String[] arr, int i, int j)
+        {
+            String temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        public static boolean isSorted(String[] arr)
         {
             int len = arr.length - 1;
             for (int pos = 0; pos < len; pos++)
             {
-                if (arr[pos]>arr[pos+1])
+                if ((arr[pos].compareTo(arr[pos+1]))> 0)
                 {
                     return true;
                 }
@@ -60,5 +67,26 @@ public class SortingUtilities
            return newArray;
        }
 
+       public static boolean checkSum(int[] before, int[] after){
+            int sum1 = 0;
+            for (int i = 0; i< before.length; i++)
+            {
+                sum1 = sum1 + before[i];
+            }
+            int sum2 = 0;
+            for (int i = 0; i<after.length; i++)
+            {
+                sum2 = sum2 + after[i];
+            }
+
+            if (sum1 == sum2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+       }
 
     }

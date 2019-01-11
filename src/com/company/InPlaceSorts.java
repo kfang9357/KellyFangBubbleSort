@@ -1,20 +1,22 @@
 package com.company;
 import static com.company.SortingUtilities.isSorted;
 import static com.company.SortingUtilities.swap;
+import static com.company.SortingUtilities.swap2;
 
 public class InPlaceSorts {
-    public static void bubbleSort(int[] arr)
+    public static void bubbleSort(String [] stringArr)
     {
-        int len = arr.length;
+        int len = stringArr.length;
 
-        while (isSorted(arr) )
+        while (isSorted(stringArr) )
         {
             for (int i = 0; i < len - 1; i++)
             {
-                if (arr[i]> arr[i+1])
+                if ((stringArr[i].compareTo(stringArr[i+1]))>0)
                 {
-                    swap(arr, i+0, i+1);
+                    swap2(stringArr,i,i+1);
                 }
+
             }
         }
     }
