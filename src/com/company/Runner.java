@@ -22,12 +22,14 @@ public class Runner {
 
 	    System.out.println("Time taken: "+time+" nanoseconds");
 
+	    System.out.println("");
+
 	    /****************************************************/
 
-        int [] testArr2 = {7,5,3,5,2,4,2,1,3,4,4};
+        double [] testArr2 = {7.2,5.1,3.4,5.7,2.2,4.5,2.1,1.9,3.1,4.6,4.8};
 
         System.out.print("Before: ");
-        for  (int num:testArr2)
+        for  (double num:testArr2)
         {System.out.print(num+" ");}
         System.out.println();
 
@@ -36,16 +38,15 @@ public class Runner {
         time2 = System.nanoTime() - time2;
 
         System.out.print("After: ");
-        for (int num:testArr2) {
+        for (double num:testArr2) {
             System.out.print(num + " ");
         }
         System.out.println();
         System.out.println("Time taken: "+time2+" nanoseconds");
-
+        System.out.println("");
         /*****************************************************/
 
         int [] testArr3 = {9,4,6,3,2,7,5,4,2,7,31,9};
-
         System.out.print("Before: ");
         for  (int num:testArr3)
         {System.out.print(num+" ");}

@@ -44,6 +44,13 @@ public class SortingUtilities
             arr[j] = temp;
         }
 
+        public static void swap3 (double[] arr, int i, int j)
+        {
+           double temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
         public static boolean isSorted(String[] arr)
         {
             int len = arr.length - 1;

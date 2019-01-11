@@ -1,7 +1,6 @@
 package com.company;
-import static com.company.SortingUtilities.isSorted;
-import static com.company.SortingUtilities.swap;
-import static com.company.SortingUtilities.swap2;
+
+import static com.company.SortingUtilities.*;
 
 public class InPlaceSorts {
     public static void bubbleSort(String [] stringArr)
@@ -21,19 +20,19 @@ public class InPlaceSorts {
         }
     }
 
-    public static void selectionSort(int[]arr) {
+    public static void selectionSort(double[]arr) {
         for(int index = 0; index < arr.length; index++)
            minimumIndex(arr, index);
         }
 
-    public static int minimumIndex(int arr[], int ind)
+    public static int minimumIndex(double arr[], int ind)
     {
         int minInd = ind;
         for (int i = ind + 1; i <arr.length; i++)
         {
             if (arr[i] < arr[minInd])
             {
-                swap(arr,i,minInd);
+                swap3(arr,i,minInd);
             }
         }
         return minInd;
