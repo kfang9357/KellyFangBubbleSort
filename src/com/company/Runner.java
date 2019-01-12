@@ -27,7 +27,7 @@ public class Runner {
 	    /****************************************************/
 
         double [] testArr2 = {7.2,5.1,3.4,5.7,2.2,4.5,2.1,1.9,3.1,4.6,4.8};
-
+        double [] prev = SortingUtilities.copyDoubleArray(testArr2);
         System.out.print("Before: ");
         for  (double num:testArr2)
         {System.out.print(num+" ");}
@@ -36,6 +36,10 @@ public class Runner {
         long time2 = System.nanoTime();
         InPlaceSorts.selectionSort(testArr2);
         time2 = System.nanoTime() - time2;
+        if (SortingUtilities.checkSum2(prev, testArr2))
+        {
+            System.out.println("The sum of both arrays are equal");
+        }
 
         System.out.print("After: ");
         for (double num:testArr2) {
@@ -47,6 +51,7 @@ public class Runner {
         /*****************************************************/
 
         int [] testArr3 = {9,4,6,3,2,7,5,4,2,7,31,9};
+        int[] b = SortingUtilities.copyIntArray(testArr3);
         System.out.print("Before: ");
         for  (int num:testArr3)
         {System.out.print(num+" ");}
@@ -55,6 +60,11 @@ public class Runner {
         long time3 = System.nanoTime();
         InPlaceSorts.insertionSort(testArr3);
         time3 = System.nanoTime() - time3;
+        if (SortingUtilities.checkSum(testArr3, b))
+        {
+            System.out.println("The sum of both arrays are equal");
+        }
+
 
         System.out.print("After: ");
         for (int num:testArr3) {
