@@ -7,7 +7,7 @@ public class InPlaceSorts {
     {
         int len = stringArr.length;
 
-        while (isSorted(stringArr) )
+        while (isUnsorted(stringArr) )
         {
             for (int i = 0; i < len - 1; i++)
             {
